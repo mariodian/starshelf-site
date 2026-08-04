@@ -361,10 +361,15 @@ main {
 
 .hero-lead {
   margin: 0 auto;
-  max-width: 36rem;
+  max-width: 34rem;
   color: var(--text-secondary);
   font-size: clamp(1rem, 1.6vw, 1.125rem);
   line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.hero-lead-line {
+  display: block;
 }
 
 /* ——— Product stage ——— */
