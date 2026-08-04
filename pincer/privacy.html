@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Pincer</title>
+    <meta
+      name="description"
+      content="Pincer Privacy Policy: agent monitoring data stays on your device in local SQLite. No Pincer cloud for health payloads by default."
+    />
+    <meta name="theme-color" content="#0a0908" />
+    <link rel="icon" type="image/png" href="assets/icon-256.png" />
+    <link rel="apple-touch-icon" href="assets/icon-256.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="ops-bg" aria-hidden="true"></div>
+    <div class="ops-grid" aria-hidden="true"></div>
+
+    <header class="site-header scrolled">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+          Pincer
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#install">Install</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="index.html#install">Install</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container legal-hero">
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Effective date: August 4, 2026 · Last updated: August 4, 2026</p>
+      </div>
+
+      <article class="container legal-content">
+        <p>
+          This Privacy Policy explains how <strong>Pincer</strong> (“Pincer,” “we,” “us,” or “our”)
+          handles information when you use the Pincer desktop application for macOS, Windows, and
+          Linux (the “App”), the optional <code>pincerd</code> daemon (the “Daemon”), and this
+          website (the “Site”). Monitoring data stays on devices and hosts you control; we do not
+          run a Pincer cloud that receives your agent health payloads by default.
+        </p>
+
+        <h2>1. Who we are</h2>
+        <p>
+          Pincer is open-source tray monitoring for local AI agents. It shows live status, history,
+          charts, incidents, and reports from the system tray so you can keep agent health in view
+          without juggling terminals and dashboards.
+        </p>
+        <p>
+          Contact:
+          <a href="https://github.com/mariodian/pincer/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
+          and
+          <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+          on X.
+        </p>
+
+        <h2>2. Summary</h2>
+        <ul>
+          <li>
+            Agent monitoring data lives <strong>on your device</strong> in local
+            <strong>SQLite</strong> (and related app data directories).
+          </li>
+          <li>
+            There is <strong>no Pincer cloud</strong> that receives agent health payloads by
+            default.
+          </li>
+          <li>
+            The App contacts <strong>agent and health endpoints you configure</strong>, and may
+            check for updates you enable.
+          </li>
+          <li>
+            This Site is static. It uses <strong>no</strong> third-party analytics, ad pixels, or
+            tracking cookies.
+          </li>
+        </ul>
+
+        <h2>3. Information the App stores</h2>
+        <p>
+          On your machine, the App may store data in local SQLite and the application data directory,
+          including:
+        </p>
+        <ul>
+          <li><strong>Agent configuration</strong> — names, types, health endpoints, and related setup you provide</li>
+          <li><strong>Health check results and history</strong> — status samples, timestamps, incidents, and chart history</li>
+          <li>
+            <strong>Settings</strong> — polling intervals, retention, notifications, launch-at-login,
+            theme, auto-update preferences, and similar options
+          </li>
+          <li>
+            <strong>Secrets you set for local use</strong> — for example a Daemon auth secret stored
+            where the App or Daemon expects it on your system
+          </li>
+        </ul>
+        <p>
+          That data remains under your control on hosts you run. Pincer does not operate a multi-tenant
+          backend that collects it for us.
+        </p>
+
+        <h2>4. Network activity</h2>
+        <p>Depending on how you configure and use Pincer, the App or Daemon may:</p>
+        <ul>
+          <li>
+            Contact <strong>user-configured agent or health endpoints</strong> (local or remote URLs
+            you supply) to collect status
+          </li>
+          <li>
+            Check for <strong>updates</strong> from GitHub Releases or other update channels you
+            enable
+          </li>
+          <li>
+            Talk to a <strong>Daemon (<code>pincerd</code>)</strong> that you host, using the secret
+            you configure
+          </li>
+        </ul>
+        <p>
+          Those parties or endpoints process requests under their own policies and your setup. Once
+          traffic leaves your machine under configuration you chose, those systems control how they
+          handle it.
+        </p>
+
+        <h2>5. Daemon</h2>
+        <p>
+          The optional Daemon (<code>pincerd</code>) can keep collecting health data when the desktop
+          UI is closed. It runs on a machine or server <strong>you</strong> control. You set and
+          protect the authentication secret. Pincer does not operate a multi-tenant Daemon service
+          for you.
+        </p>
+        <p>
+          If you expose the Daemon on a network, treat the secret and host like any other
+          self-hosted service: restrict access, use TLS where appropriate, and rotate credentials
+          if they leak.
+        </p>
+
+        <h2>6. This website</h2>
+        <p>
+          The Site is static (for example on GitHub Pages). It offers product information, this
+          Privacy Policy, and Terms of Service.
+        </p>
+        <ul>
+          <li>We collect no personal information through forms on this Site.</li>
+          <li>We use no third-party analytics, ad pixels, or tracking cookies.</li>
+          <li>
+            Hosts (GitHub Pages, CDN, or DNS) may log IP address, user agent, and request URL. The
+            host controls that logging; Pincer has no application backend for it.
+          </li>
+        </ul>
+
+        <h2>7. Children’s privacy</h2>
+        <p>
+          Pincer is not directed to children under 13 (or the minimum age where you live). We do not
+          knowingly collect personal information from children.
+        </p>
+
+        <h2>8. Retention and deletion</h2>
+        <p>
+          Monitoring data and settings live in local SQLite and app data on devices you control, so
+          you decide retention. You may:
+        </p>
+        <ul>
+          <li>Change retention and related settings in the App</li>
+          <li>Delete or reset App data directories and SQLite files</li>
+          <li>Uninstall the App (and remove remaining app data if your OS leaves any behind)</li>
+          <li>Stop or remove any Daemon you run and delete its data on that host</li>
+        </ul>
+        <p>Pincer keeps no central user-account database for the App.</p>
+
+        <h2>9. Security</h2>
+        <p>
+          Pincer is local-first: secrets and health history stay where you install the App or Daemon.
+          No system is perfectly secure. Protect your device, OS account, disk encryption, backup
+          copies of app data, and any Daemon secret or network exposure you configure.
+        </p>
+
+        <h2>10. International users</h2>
+        <p>
+          The App and Daemon run where you install them. Endpoints and update hosts you use may
+          process requests in several countries under their rules. The host may serve this Site from
+          more than one region.
+        </p>
+
+        <h2>11. Your choices and rights</h2>
+        <p>
+          Your jurisdiction may grant rights over personal data (access, deletion, correction, and
+          more). For data only on your device or self-hosted Daemon, use the App controls and file
+          system actions above. For data held by third-party agents, endpoints, or hosts you
+          configure, contact those parties.
+        </p>
+        <p>
+          Privacy questions about Pincer:
+          <a href="https://github.com/mariodian/pincer/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
+          or
+          <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>.
+        </p>
+
+        <h2>12. Open source</h2>
+        <p>
+          App and Daemon source code is at
+          <a href="https://github.com/mariodian/pincer" target="_blank" rel="noopener noreferrer">github.com/mariodian/pincer</a>.
+          You can review how local storage and network calls work.
+        </p>
+
+        <h2>13. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy. The “Last updated” date at the top will change when we
+          do. If you keep using the App, Daemon, or Site after a change, you accept the revised
+          policy where the law allows.
+        </p>
+
+        <h2>14. Contact</h2>
+        <p>
+          Privacy inquiries and reports:
+          <a href="https://github.com/mariodian/pincer/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a><br />
+          On X:
+          <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+        </p>
+
+        <div class="legal-note">
+          This policy supports transparency for a local-first open-source product. It is not legal
+          advice. For advice about your situation, consult a qualified attorney.
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+              Pincer
+            </a>
+            <p>Desktop monitoring for local AI agents. Status stays in your tray.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#how-it-works">How it works</a></li>
+              <li><a href="index.html#screenshots">Screenshots</a></li>
+              <li><a href="index.html#install">Install</a></li>
+              <li>
+                <a href="https://github.com/mariodian/pincer" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li>
+                <a
+                  href="https://github.com/mariodian/pincer/blob/main/LICENSE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MIT License</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> Mario Dian.</span>
+          <span>
+            <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
