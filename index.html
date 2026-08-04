@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Starshelf — Auto-categorize GitHub stars with AI</title>
+    <meta
+      name="description"
+      content="Starshelf auto-categorizes your GitHub stars with AI. Chrome and Firefox. Your keys stay in your browser."
+    />
+    <meta name="theme-color" content="#0a0814" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Starshelf — Auto-categorize GitHub stars with AI" />
+    <meta
+      property="og:description"
+      content="Star a repo. Starshelf shelves it. Chrome and Firefox."
+    />
+    <meta property="og:image" content="assets/icon-256.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Starshelf" />
+    <meta
+      name="twitter:description"
+      content="Auto-categorize GitHub stars with AI. Chrome and Firefox."
+    />
+    <link rel="icon" type="image/png" href="assets/icon-256.png" />
+    <link rel="apple-touch-icon" href="assets/icon-256.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="cosmic-bg" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="stars-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+          Starshelf
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#screenshots">Screenshots</a></li>
+          <li><a href="#install">Install</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a
+            class="btn btn-chrome btn-sm"
+            href="https://chromewebstore.google.com/detail/starshelf/cofjbnkmfcpmpdlonjookehnpncaalpj"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.002-3.954 6.848A12 12 0 0 0 12 24c6.627 0 12-5.373 12-12 0-.255-.01-.508-.028-.76zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728z"
+              />
+            </svg>
+            Chrome
+          </a>
+          <a
+            class="btn btn-firefox btn-sm"
+            href="https://addons.mozilla.org/en-US/firefox/addon/starshelf/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 4.959 3.013 9.204 7.277 10.999-.054-.47-.103-1.194.021-1.71.113-.466.728-2.967.728-2.967s-.186-.372-.186-.92c0-.862.5-1.506 1.122-1.506.529 0 .785.397.785.873 0 .532-.338 1.327-.513 2.064-.146.617.309 1.12.917 1.12 1.101 0 1.947-1.161 1.947-2.835 0-1.482-1.065-2.518-2.587-2.518-1.762 0-2.797 1.322-2.797 2.688 0 .532.205 1.103.461 1.414a.37.37 0 0 1 .085.354c-.093.39-.3 1.23-.341 1.401-.053.226-.176.274-.406.165-1.514-.705-2.461-2.92-2.461-4.701 0-3.831 2.784-7.352 8.024-7.352 4.213 0 7.49 3.003 7.49 7.015 0 4.186-2.64 7.554-6.304 7.554-1.231 0-2.39-.641-2.785-1.398l-.757 2.884c-.274 1.055-1.015 2.378-1.512 3.184A12.01 12.01 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"
+              />
+            </svg>
+            Firefox
+          </a>
+        </div>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-orb" aria-hidden="true"></div>
+        <div class="container">
+          <div class="hero-badge reveal">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            Chrome &amp; Firefox · Your own AI key
+          </div>
+
+          <img
+            class="hero-icon reveal reveal-delay-1"
+            src="assets/icon-256.png"
+            width="96"
+            height="96"
+            alt="Starshelf icon — stacked stars on purple"
+          />
+
+          <h1 class="reveal reveal-delay-1">
+            Your GitHub stars,<br />
+            <span class="gradient">finally on shelves</span>
+          </h1>
+
+          <p class="hero-lead reveal reveal-delay-2">
+            When you star a repo, Starshelf labels it with AI. Browse by topic instead of
+            scrolling a flat list.
+          </p>
+
+          <div class="hero-actions reveal reveal-delay-3">
+            <a
+              class="btn btn-chrome btn-lg"
+              href="https://chromewebstore.google.com/detail/starshelf/cofjbnkmfcpmpdlonjookehnpncaalpj"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.002-3.954 6.848A12 12 0 0 0 12 24c6.627 0 12-5.373 12-12 0-.255-.01-.508-.028-.76zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728z"
+                />
+              </svg>
+              Add to Chrome
+            </a>
+            <a
+              class="btn btn-firefox btn-lg"
+              href="https://addons.mozilla.org/en-US/firefox/addon/starshelf/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 4.959 3.013 9.204 7.277 10.999-.054-.47-.103-1.194.021-1.71.113-.466.728-2.967.728-2.967s-.186-.372-.186-.92c0-.862.5-1.506 1.122-1.506.529 0 .785.397.785.873 0 .532-.338 1.327-.513 2.064-.146.617.309 1.12.917 1.12 1.101 0 1.947-1.161 1.947-2.835 0-1.482-1.065-2.518-2.587-2.518-1.762 0-2.797 1.322-2.797 2.688 0 .532.205 1.103.461 1.414a.37.37 0 0 1 .085.354c-.093.39-.3 1.23-.341 1.401-.053.226-.176.274-.406.165-1.514-.705-2.461-2.92-2.461-4.701 0-3.831 2.784-7.352 8.024-7.352 4.213 0 7.49 3.003 7.49 7.015 0 4.186-2.64 7.554-6.304 7.554-1.231 0-2.39-.641-2.785-1.398l-.757 2.884c-.274 1.055-1.015 2.378-1.512 3.184A12.01 12.01 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"
+                />
+              </svg>
+              Get for Firefox
+            </a>
+            <a
+              class="btn btn-ghost btn-lg"
+              href="https://github.com/mariodian/starshelf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+
+          <div class="hero-meta reveal reveal-delay-4">
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              Keys stay in your browser
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" />
+              </svg>
+              Anthropic · OpenAI · OpenCode
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linejoin="round" />
+              </svg>
+              MIT open source
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem -->
+      <section class="section" id="why" aria-labelledby="why-title">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <div class="section-label">The problem</div>
+            <h2 class="section-title" id="why-title">Stars pile up. Memory doesn’t.</h2>
+            <p class="section-lead">
+              After hundreds of stars, that library from six months ago vanishes under a scroll of
+              good intentions.
+            </p>
+          </div>
+
+          <div class="problem-grid">
+            <article class="problem-card reveal">
+              <div class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 6h16M4 12h10M4 18h14" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Flat lists don’t scale</h3>
+              <p>
+                GitHub’s star page is one stream: no topics, no structure. Finding “that auth
+                library” means endless scrolling.
+              </p>
+            </article>
+            <article class="problem-card highlight reveal reveal-delay-1">
+              <div class="problem-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3z" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Starshelf shelves them for you</h3>
+              <p>
+                Star a repo; AI puts it on a GitHub list. A label appears on the page. Search when
+                you need the repo later.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="section" id="features" aria-labelledby="features-title">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-label">Features</div>
+            <h2 class="section-title" id="features-title">For people who star first and sort never</h2>
+            <p class="section-lead">A light extension. Your keys. Your providers. Categories that stick.</p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7z" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Star-and-forget</h3>
+              <p>Starshelf detects the star click and categorizes the repo. No extra steps.</p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay-1">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 6h16M4 12h16M4 18h10" stroke-linecap="round" />
+                  <path d="M16 16l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Batch categorize</h3>
+              <p>Classify your entire star library in one run. Progress stays in the session.</p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay-2">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M21 21l-4.3-4.3" stroke-linecap="round" />
+                </svg>
+              </div>
+              <h3>Search your stars</h3>
+              <p>Find starred repos by name, description, or language.</p>
+            </article>
+
+            <article class="feature-card reveal">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 3v3M12 18v3M3 12h3M18 12h3" stroke-linecap="round" />
+                  <circle cx="12" cy="12" r="4" />
+                </svg>
+              </div>
+              <h3>Multi-provider AI</h3>
+              <p>Use Anthropic, OpenAI, or OpenCode with your own API key. Starshelf sells no access.</p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay-1">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="14" rx="2" />
+                  <path d="M8 20h8M7 9h5l1 2h4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Instant overlay</h3>
+              <p>After you star, a category label appears on the page so you stay on GitHub.</p>
+            </article>
+
+            <article class="feature-card reveal reveal-delay-2">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3" stroke-linecap="round" />
+                  <path d="M18 4v4h-4M6 20v-4h4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Regenerate &amp; format</h3>
+              <p>Re-categorize anytime. Match emoji prefixes and list names to your style.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="section" id="how-it-works" aria-labelledby="how-title">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <div class="section-label">How it works</div>
+            <h2 class="section-title" id="how-title">Three steps to a tidy shelf</h2>
+            <p class="section-lead">Install once. Add your keys. Keep starring as you always have.</p>
+          </div>
+
+          <div class="steps">
+            <article class="step reveal">
+              <div class="step-num">1</div>
+              <h3>Install the extension</h3>
+              <p>Get Starshelf from the Chrome Web Store or Firefox Add-ons. Chromium browsers work too.</p>
+            </article>
+            <article class="step reveal reveal-delay-1">
+              <div class="step-num">2</div>
+              <h3>Add your keys</h3>
+              <p>
+                Open the popup. Enter a GitHub token and an API key for Anthropic, OpenAI, or OpenCode.
+                Keys stay in local extension storage.
+              </p>
+            </article>
+            <article class="step reveal reveal-delay-2">
+              <div class="step-num">3</div>
+              <h3>Star &amp; shelve</h3>
+              <p>
+                Star any public GitHub repo. Starshelf categorizes it, updates your lists, and shows an
+                overlay. Batch-run older stars when you choose.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshots -->
+      <section class="section" id="screenshots" aria-labelledby="shots-title">
+        <div class="container">
+          <div class="section-header centered reveal">
+            <div class="section-label">Product</div>
+            <h2 class="section-title" id="shots-title">See it in action</h2>
+            <p class="section-lead">From the first star to searchable shelves.</p>
+          </div>
+
+          <div class="shots-stage reveal">
+            <div class="shot-main">
+              <img
+                data-shot-main
+                src="assets/screen-1.webp"
+                width="1280"
+                height="800"
+                alt="AI categorizes starred repos automatically"
+              />
+            </div>
+            <div class="shots-rail" role="group" aria-label="Screenshot thumbnails">
+              <button
+                type="button"
+                class="shot-thumb active"
+                data-shot-thumb
+                data-src="assets/screen-1.webp"
+                data-alt="AI categorizes starred repos automatically"
+                data-caption="AI categorizes starred repos automatically"
+                aria-pressed="true"
+              >
+                <img src="assets/screen-1.webp" width="320" height="200" alt="" />
+              </button>
+              <button
+                type="button"
+                class="shot-thumb"
+                data-shot-thumb
+                data-src="assets/screen-2.webp"
+                data-alt="Bring your own API key"
+                data-caption="Your own API key — Anthropic, OpenAI, or OpenCode"
+                aria-pressed="false"
+              >
+                <img src="assets/screen-2.webp" width="320" height="200" alt="" />
+              </button>
+              <button
+                type="button"
+                class="shot-thumb"
+                data-shot-thumb
+                data-src="assets/screen-3.webp"
+                data-alt="Stars land on the right category"
+                data-caption="Stars land on the right category"
+                aria-pressed="false"
+              >
+                <img src="assets/screen-3.webp" width="320" height="200" alt="" />
+              </button>
+              <button
+                type="button"
+                class="shot-thumb"
+                data-shot-thumb
+                data-src="assets/screen-4.webp"
+                data-alt="Search your stars"
+                data-caption="Search by name, description, or language"
+                aria-pressed="false"
+              >
+                <img src="assets/screen-4.webp" width="320" height="200" alt="" />
+              </button>
+              <button
+                type="button"
+                class="shot-thumb"
+                data-shot-thumb
+                data-src="assets/screen-5.webp"
+                data-alt="Your stars, finally organized"
+                data-caption="Your stars, finally organized"
+                aria-pressed="false"
+              >
+                <img src="assets/screen-5.webp" width="320" height="200" alt="" />
+              </button>
+            </div>
+            <p class="shot-caption" data-shot-caption>AI categorizes starred repos automatically</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Install -->
+      <section class="section" id="install" aria-labelledby="install-title">
+        <div class="container">
+          <div class="install-band reveal">
+            <h2 id="install-title">Put your stars on a shelf</h2>
+            <p>Free, open source, and private by design. Install Starshelf; stop losing repos in the scroll.</p>
+            <div class="install-actions">
+              <a
+                class="btn btn-chrome btn-lg"
+                href="https://chromewebstore.google.com/detail/starshelf/cofjbnkmfcpmpdlonjookehnpncaalpj"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.002-3.954 6.848A12 12 0 0 0 12 24c6.627 0 12-5.373 12-12 0-.255-.01-.508-.028-.76zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728z"
+                  />
+                </svg>
+                Chrome Web Store
+              </a>
+              <a
+                class="btn btn-firefox btn-lg"
+                href="https://addons.mozilla.org/en-US/firefox/addon/starshelf/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Get Firefox Add-on
+              </a>
+              <a
+                class="btn btn-ghost btn-lg"
+                href="https://github.com/mariodian/starshelf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View source
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+              Starshelf
+            </a>
+            <p>AI categories for your GitHub stars. Keys stay local.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#how-it-works">How it works</a></li>
+              <li><a href="#install">Install</a></li>
+              <li>
+                <a href="https://github.com/mariodian/starshelf" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li>
+                <a href="https://github.com/mariodian/starshelf/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">MIT License</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> Starshelf. Built by Mario Dian.</span>
+          <span>
+            <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

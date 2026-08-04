@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Starshelf</title>
+    <meta
+      name="description"
+      content="Starshelf Privacy Policy: your API keys and GitHub token stay in the browser. No Starshelf backend collects them."
+    />
+    <meta name="theme-color" content="#0a0814" />
+    <link rel="icon" type="image/png" href="assets/icon-256.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="cosmic-bg" aria-hidden="true"></div>
+    <div class="stars" aria-hidden="true"></div>
+    <div class="stars-2" aria-hidden="true"></div>
+
+    <header class="site-header scrolled">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+          Starshelf
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#install">Install</a></li>
+          <li><a href="privacy.html" aria-current="page">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="index.html#install">Install</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container legal-hero">
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Effective date: August 4, 2026 · Last updated: August 4, 2026</p>
+      </div>
+
+      <article class="container legal-content">
+        <p>
+          This Privacy Policy explains how <strong>Starshelf</strong> (“Starshelf,” “we,” “us,” or
+          “our”) handles information when you use the Starshelf browser extension for Chrome and
+          Firefox (the “Extension”) and this website (the “Site”). Sensitive credentials stay on
+          your device; we do not collect them.
+        </p>
+
+        <h2>1. Who we are</h2>
+        <p>
+          Starshelf is an open-source browser extension. It auto-categorizes GitHub starred
+          repositories with AI providers that you configure.
+        </p>
+        <p>
+          Contact:
+          <a href="mailto:starshelf.wistful980@slmail.me">starshelf.wistful980@slmail.me</a>
+        </p>
+
+        <h2>2. Summary</h2>
+        <ul>
+          <li>Starshelf runs <strong>no backend</strong> that receives your API keys or GitHub token.</li>
+          <li>Keys and tokens live in <strong>your browser’s extension storage</strong>.</li>
+          <li>The Extension calls <strong>GitHub</strong> and your <strong>AI provider</strong> from your browser.</li>
+          <li>This Site is static. It uses <strong>no</strong> analytics cookies or ad trackers.</li>
+        </ul>
+
+        <h2>3. Information the Extension handles</h2>
+
+        <h3>3.1 Credentials you provide</h3>
+        <p>On your device, local extension storage may hold:</p>
+        <ul>
+          <li>A <strong>GitHub personal access token</strong> (or equivalent) that you supply</li>
+          <li>An <strong>API key</strong> for your AI provider (Anthropic, OpenAI, or OpenCode)</li>
+          <li>Provider, model, formatting, and related settings</li>
+        </ul>
+        <p>
+          The Extension uses these values only to call those services on your behalf. We neither
+          receive nor store copies. Starshelf provides no servers for that purpose.
+        </p>
+
+        <h3>3.2 Categorization and repository data</h3>
+        <p>To categorize repositories, the Extension may:</p>
+        <ul>
+          <li>Read repo metadata (for example name, description, and language) from the GitHub API or github.com</li>
+          <li>Send that information to your AI provider to obtain a category label</li>
+          <li>Create or update <strong>GitHub lists</strong> on your account per your settings</li>
+          <li>Cache results and related state in browser storage (including session storage for batch progress)</li>
+        </ul>
+
+        <h3>3.3 Permissions</h3>
+        <p>The Extension requests limited permissions:</p>
+        <ul>
+          <li><strong>storage</strong> — keep settings and categorizations on your device</li>
+          <li><strong>github.com</strong> and <strong>api.github.com</strong> — content scripts, star detection, and list or API work</li>
+          <li>AI provider hosts you use (for example Anthropic, OpenAI, OpenCode) — categorization with your key</li>
+        </ul>
+
+        <h2>4. Third-party services</h2>
+        <p>
+          When you use the Extension, your browser talks directly to third parties you choose or
+          that GitHub requires:
+        </p>
+        <ul>
+          <li><strong>GitHub</strong> — authentication, repository data, and lists, under GitHub’s privacy policy and terms</li>
+          <li><strong>AI providers</strong> (Anthropic, OpenAI, OpenCode, or others you configure) — prompts and metadata for categories, under each provider’s policies. You must follow those terms for data you send with your key</li>
+          <li><strong>Browser vendors</strong> (Google, Mozilla, and others) — store distribution and updates under their policies</li>
+        </ul>
+        <p>
+          Once data leaves your browser under your credentials, those parties control how they
+          process it.
+        </p>
+
+        <h2>5. This website</h2>
+        <p>
+          The Site is static (for example on GitHub Pages). It offers product information, this
+          Privacy Policy, and Terms of Service.
+        </p>
+        <ul>
+          <li>We collect no personal information through forms on this Site.</li>
+          <li>We use no third-party analytics, ad pixels, or tracking cookies.</li>
+          <li>
+            Hosts (GitHub Pages, CDN, or DNS) may log IP address, user agent, and request URL.
+            The host controls that logging; Starshelf has no application backend for it.
+          </li>
+        </ul>
+
+        <h2>6. Children’s privacy</h2>
+        <p>
+          Starshelf is not directed to children under 13 (or the minimum age where you live). We
+          do not knowingly collect personal information from children.
+        </p>
+
+        <h2>7. Data retention and deletion</h2>
+        <p>
+          Credentials and categorizations live in your browser’s extension storage, so you control
+          retention. You may:
+        </p>
+        <ul>
+          <li>Clear or change keys and settings in the Extension popup</li>
+          <li>Remove the Extension (browsers usually delete its local storage)</li>
+          <li>Revoke GitHub tokens and AI API keys in those providers’ dashboards</li>
+        </ul>
+        <p>Starshelf keeps no separate user-account database for the Extension.</p>
+
+        <h2>8. Security</h2>
+        <p>
+          Starshelf keeps secrets local and uses them only for the APIs you configure. No storage
+          or transmission is perfectly secure. Protect your device, browser profile, and API keys,
+          and use GitHub tokens with limited scopes.
+        </p>
+
+        <h2>9. International users</h2>
+        <p>
+          GitHub and your AI provider may process data in several countries under their rules. The
+          host may serve this Site from more than one region.
+        </p>
+
+        <h2>10. Your choices and rights</h2>
+        <p>
+          Your jurisdiction may grant rights over personal data (access, deletion, correction, and
+          more). For data only on your device, use the Extension and browser controls above. For
+          data held by GitHub or an AI provider, contact them.
+        </p>
+        <p>
+          Privacy questions about Starshelf:
+          <a href="mailto:starshelf.wistful980@slmail.me">starshelf.wistful980@slmail.me</a>.
+        </p>
+
+        <h2>11. Open source</h2>
+        <p>
+          Extension source code is at
+          <a href="https://github.com/mariodian/starshelf" target="_blank" rel="noopener noreferrer">github.com/mariodian/starshelf</a>.
+          You can review how storage and network calls work.
+        </p>
+
+        <h2>12. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy. The “Last updated” date at the top will change when we
+          do. If you keep using the Extension or Site after a change, you accept the revised policy
+          where the law allows.
+        </p>
+
+        <h2>13. Contact</h2>
+        <p>
+          Privacy inquiries:
+          <a href="mailto:starshelf.wistful980@slmail.me">starshelf.wistful980@slmail.me</a><br />
+          Issues and security reports:
+          <a href="https://github.com/mariodian/starshelf/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
+        </p>
+
+        <div class="legal-note">
+          This policy supports transparency and store compliance. It is not legal advice. For advice
+          about your situation, consult a qualified attorney.
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+              Starshelf
+            </a>
+            <p>AI categories for your GitHub stars. Keys stay local.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#install">Install</a></li>
+              <li>
+                <a href="https://github.com/mariodian/starshelf" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> Starshelf. Built by Mario Dian.</span>
+          <span>
+            <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
