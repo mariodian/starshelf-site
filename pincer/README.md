@@ -2,7 +2,7 @@
 
 Product site for [Pincer](https://github.com/mariodian/pincer), desktop monitoring for local AI agents.
 
-**Intended URL:** [https://apps.mariodian.com/pincer/](https://apps.mariodian.com/pincer/)
+**URL:** [https://apps.mariodian.com/pincer/](https://apps.mariodian.com/pincer/)
 
 ## Pages
 
