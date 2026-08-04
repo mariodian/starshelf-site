@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service — Pincer</title>
+    <meta
+      name="description"
+      content="Pincer Terms of Service: MIT-licensed desktop agent monitoring, as-is, no warranty for agent uptime."
+    />
+    <meta name="theme-color" content="#0a0908" />
+    <link rel="icon" type="image/png" href="assets/icon-256.png" />
+    <link rel="apple-touch-icon" href="assets/icon-256.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="ops-bg" aria-hidden="true"></div>
+    <div class="ops-grid" aria-hidden="true"></div>
+
+    <header class="site-header scrolled">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html">
+          <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+          Pincer
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#install">Install</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html" aria-current="page">Terms</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a class="btn btn-primary btn-sm" href="index.html#install">Install</a>
+        </div>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container legal-hero">
+        <h1>Terms of Service</h1>
+        <p class="legal-meta">Effective date: August 4, 2026 · Last updated: August 4, 2026</p>
+      </div>
+
+      <article class="container legal-content">
+        <p>
+          These Terms of Service (“Terms”) govern your use of the <strong>Pincer</strong> desktop
+          application for macOS, Windows, and Linux (the “App”), the optional
+          <code>pincerd</code> daemon (the “Daemon”), and this website (the “Site”). By installing
+          or using the App or Daemon, or by using the Site, you accept these Terms. If you reject
+          them, do not use Pincer.
+        </p>
+
+        <h2>1. Acceptance</h2>
+        <p>
+          Using the App, Daemon, or Site means you accept these Terms and our
+          <a href="privacy.html">Privacy Policy</a>. If you use Pincer on behalf of an organization,
+          you represent that you have authority to bind that organization.
+        </p>
+
+        <h2>2. The software</h2>
+        <p>
+          Pincer is open-source tray monitoring for local AI agents. The App shows live status,
+          history, charts, incidents, and reports from the system tray. The optional Daemon can keep
+          collecting health data when the desktop UI is closed. Source code is available on
+          <a href="https://github.com/mariodian/pincer" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+        <p>
+          Pincer does not operate a multi-tenant cloud that receives your agent health payloads by
+          default. You install and run software on machines and hosts you control.
+        </p>
+
+        <h2>3. License</h2>
+        <p>
+          App and Daemon source code is available under the
+          <a
+            href="https://github.com/mariodian/pincer/blob/main/LICENSE"
+            target="_blank"
+            rel="noopener noreferrer"
+            >MIT License</a
+          >
+          in the project repository. That license covers redistribution and modification of the
+          software. These Terms add conditions for using the distributed App, Daemon, and Site.
+        </p>
+        <p>
+          Under these Terms, we grant you a personal, non-exclusive, revocable right to install and
+          use the App and Daemon for your own purposes, subject to the MIT License and these Terms.
+          You may not claim endorsement by third-party agent vendors or misuse Site branding.
+        </p>
+
+        <h2>4. Your responsibilities</h2>
+        <p>You agree to:</p>
+        <ul>
+          <li>Use Pincer lawfully in your jurisdiction</li>
+          <li>Configure only agents, health endpoints, and hosts you are authorized to monitor</li>
+          <li>
+            Secure secrets you set for local use (for example a Daemon auth secret) and protect
+            devices where the App or Daemon runs
+          </li>
+          <li>
+            Comply with third-party terms, policies, and rate limits for agents, APIs, and services
+            you monitor or connect to
+          </li>
+          <li>
+            Avoid using Pincer to break the law, infringe rights, or abuse third-party systems
+          </li>
+          <li>
+            Avoid reverse engineering or interfering with the App or Daemon except as open-source
+            licenses and law allow
+          </li>
+        </ul>
+        <p>
+          Local install and network exposure are your responsibility. If you expose the Daemon on a
+          network, restrict access, use TLS where appropriate, and rotate credentials if they leak.
+        </p>
+
+        <h2>5. No warranty</h2>
+        <p>
+          THE APP, DAEMON, AND SITE ARE PROVIDED <strong>“AS IS”</strong> AND
+          <strong>“AS AVAILABLE”</strong>, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED,
+          OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+          PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+        </p>
+        <p>
+          We do not warrant uninterrupted, error-free, or secure operation. We do
+          <strong>not</strong> guarantee agent uptime, correct health detection, complete incident
+          history, timely notifications, or fitness for any operational, compliance, or production
+          purpose. Agents, endpoints, and networks you configure may fail, change, or report
+          incorrectly; Pincer may miss or misclassify status.
+        </p>
+
+        <h2>6. Limitation of liability</h2>
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, PINCER AND ITS CONTRIBUTORS SHALL NOT BE LIABLE
+          FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR
+          ANY LOSS OF PROFITS, DATA, GOODWILL, OR BUSINESS INTERRUPTION, ARISING FROM OR RELATED TO
+          YOUR USE OF THE APP, DAEMON, OR SITE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+        </p>
+        <p>
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR
+          RELATING TO THESE TERMS OR PINCER SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT YOU PAID
+          US DIRECTLY FOR PINCER IN THE TWELVE MONTHS BEFORE THE CLAIM (IF ANY), OR (B) TEN US
+          DOLLARS (US&nbsp;$10).
+        </p>
+        <p>
+          Some places forbid certain limits. There, our liability is limited as far as the law
+          allows. This is a standard open-source limitation.
+        </p>
+
+        <h2>7. The Site</h2>
+        <p>
+          The Site is informational. It offers product information, install links, this Terms of
+          Service, and the Privacy Policy. Content may change without notice. The Site is static and
+          does not create a service-level commitment for the App or Daemon.
+        </p>
+
+        <h2>8. Open source third parties</h2>
+        <p>
+          The App and Daemon may include or depend on open-source components under their own
+          licenses. Those licenses continue to apply to the relevant components. Third-party agents,
+          update hosts, and endpoints you configure are governed by their providers’ terms, not by
+          Pincer.
+        </p>
+
+        <h2>9. Changes to these Terms</h2>
+        <p>
+          We may change these Terms by posting an updated version on the Site with a new “Last
+          updated” date. Continued use of the App, Daemon, or Site after a change is acceptance
+          where the law allows. If you reject a change, uninstall the App and Daemon and stop using
+          the Site.
+        </p>
+
+        <h2>10. Contact</h2>
+        <p>
+          Questions about these Terms:
+          <a href="https://github.com/mariodian/pincer/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a><br />
+          On X:
+          <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+        </p>
+
+        <div class="legal-note">
+          These Terms are a practical baseline for free open-source desktop software and a static
+          site. They are not legal advice. Seek professional review for jurisdiction-specific needs.
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="index.html">
+              <img class="brand-mark" src="assets/icon-256.png" width="36" height="36" alt="" />
+              Pincer
+            </a>
+            <p>Desktop monitoring for local AI agents. Status stays in your tray.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="index.html#features">Features</a></li>
+              <li><a href="index.html#how-it-works">How it works</a></li>
+              <li><a href="index.html#screenshots">Screenshots</a></li>
+              <li><a href="index.html#install">Install</a></li>
+              <li>
+                <a href="https://github.com/mariodian/pincer" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li>
+                <a
+                  href="https://github.com/mariodian/pincer/blob/main/LICENSE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >MIT License</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-year>2026</span> Mario Dian.</span>
+          <span>
+            <a href="https://x.com/mariodian" target="_blank" rel="noopener noreferrer">@mariodian</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
